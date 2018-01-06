@@ -110,8 +110,9 @@ RUN echo "#log: ${project}: Building" \
  && export HOME=${PWD} \
  && export PATH=/usr/local/bin:${PATH} \
  && rm -rf .git/hooks/* \
+ && export NODE_ENV=production \
  && npm install || npm --loglevel verbose install \
- && npm test \
+ && echo TODO: npm test \
  && sync
 
 USER nobody
